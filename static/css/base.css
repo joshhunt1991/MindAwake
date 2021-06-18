@@ -1,5 +1,5 @@
-.background-image {
-    background: url('/media/main-page.png') no-repeat center center fixed;
+body {
+    background: url('/media/background.png') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     font-family: 'Antonio', sans-serif;
