@@ -1,7 +1,38 @@
+/* text */
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital@1&display=swap');
+
+.logo-text {
+    font-family: 'Bona Nova', serif;
+}
+
+/* background colours */
+
+.purple-bg {
+    background-color: #3e054d;
+}
+
+
+/* general */
+
 body {
     background: url('/media/background.png') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     font-family: 'Antonio', sans-serif;
     font-weight: 500;
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
 }
