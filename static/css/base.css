@@ -16,6 +16,11 @@
     color: #ffffff !important;
 }
 
+.gallery-link-text {
+    color: #ffffff;
+    font-size: 1.2em;
+}
+
 /* icons */
 
 .nav-icons {
@@ -30,6 +35,10 @@
 
 .nav-item:hover {
     background-color: #8310ff;
+}
+
+.view-gallery {
+    width: 50%;
 }
 
 /* background colours */
