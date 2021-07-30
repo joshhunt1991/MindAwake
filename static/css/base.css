@@ -76,10 +76,12 @@ body {
 .strip-div {
     position: relative;
     bottom: 15px;
+    padding-bottom: 15px;
 }
 
-.merch-link {
-    padding-bottom: 15px;
+.btn-success {
+    width: 150px;
+    font-size: 2em;
 }
 
 /* media queries */
