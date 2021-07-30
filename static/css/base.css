@@ -40,6 +40,10 @@
     background-color: #3e054d;
 }
 
+.dark-trans-bg {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
 
 /* general */
 
@@ -54,6 +58,22 @@ body {
     font-family: 'Antonio', sans-serif;
     font-weight: 500;
 }
+
+.landing-text {
+    padding-top: 20px;
+    font-size: 1.5em;
+}
+
+.strip-div {
+    position: relative;
+    bottom: 15px;
+}
+
+.merch-link {
+    padding-bottom: 15px;
+}
+
+/* media queries */
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
