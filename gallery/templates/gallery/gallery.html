@@ -8,5 +8,72 @@
 </div>
 {% endblock %}
 {% block content %}
-<h4>Hello Gallery</h4>
+<div class="header-container no-margins no-padding gallery-container">
+    <div class="row">
+        <div class="col-md-3">
+
+            <div class="card">
+                <div class="card-header">
+                    Tattoo Categories
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">All</li>
+                  <li class="list-group-item">Geometric</li>
+                  <li class="list-group-item">Portraits</li>
+                  <li class="list-group-item">Small tattoos</li>
+                  <li class="list-group-item">Other</li>
+                </ul>
+              </div>
+
+        </div>
+        <div class="col-md-9">
+
+            <div class="row">
+                
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="image-thumbnail" src="https://www.indiewire.com/wp-content/uploads/2019/09/10324474a.jpg?resize=1024,683" alt="Card image cap">
+                        <div class="card-body">
+                          <p >Category- Nicholas Cage</p>
+                          <a class="btn btn-outline-dark m-1" href="{% url 'tattoo' 5 %}">View Tattoo</a>
+                        </div>
+                      </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="image-thumbnail" src="https://www.indiewire.com/wp-content/uploads/2019/09/10324474a.jpg?resize=1024,683" alt="Card image cap">
+                        <div class="card-body">
+                          <p >Category- Nicholas Cage</p>
+                          <a class="btn btn-outline-dark m-1" href="{% url 'tattoo' 5 %}">View Tattoo</a>
+                        </div>
+                      </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="image-thumbnail" src="https://www.indiewire.com/wp-content/uploads/2019/09/10324474a.jpg?resize=1024,683" alt="Card image cap">
+                        <div class="card-body">
+                          <p >Category- Nicholas Cage</p>
+                          <a class="btn btn-outline-dark m-1" href="{% url 'tattoo' 5 %}">View Tattoo</a>
+                        </div>
+                      </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="image-thumbnail" src="https://www.indiewire.com/wp-content/uploads/2019/09/10324474a.jpg?resize=1024,683" alt="Card image cap">
+                        <div class="card-body">
+                          <p >Category- Nicholas Cage</p>
+                          <a class="btn btn-outline-dark m-1" href="{% url 'tattoo' 5 %}">View Tattoo</a>
+                        </div>
+                      </div>
+                </div>
+
+            </div>
+
+            
+        </div>
+    </div>
+</div>
 {% endblock %}

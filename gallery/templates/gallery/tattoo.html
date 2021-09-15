@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_header %}
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+<div class="header-container no-margins no-padding black-bg">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col">
+                
+                <div class="tattoo-image-div text-center">
+                    <img class="tattoo-image" src="https://www.indiewire.com/wp-content/uploads/2019/09/10324474a.jpg?resize=1024,683" alt="image of a tattoo done by Jake Hunt">
+
+                    <p class="tattoo-text white-text">This is a fantastic image of our lord and saviour</p>
+                </div>
+
+                <div class="text-center">
+                    <a class="btn btn-dark m-1 return-button" href="{% url 'gallery' %}">Return to Gallery</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

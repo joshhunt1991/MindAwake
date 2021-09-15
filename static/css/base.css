@@ -21,10 +21,30 @@
     font-size: 1.2em;
 }
 
+.tattoo-text {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 /* icons */
 
 .nav-icons {
     color: #8310ff;
+}
+
+/* images and image divs */
+
+.image-thumbnail {
+    height: 200px;
+}
+
+.tattoo-image-div {
+
+}
+
+.tattoo-image {
+    max-width: 100%;
+    height: 60vh;
 }
 
 /* buttons */
@@ -41,8 +61,15 @@
     width: 50%;
 }
 
+.return-button {
+    margin-bottom: 20px;
+}
+
 /* background colours */
 
+.black-bg {
+    background-color: #000000;
+}
 
 
 .purple-bg {
@@ -82,6 +109,12 @@ body {
 .btn-success {
     width: 150px;
     font-size: 2em;
+}
+
+.gallery-container {
+    background-color: black;
+    padding-top: 20px;
+    margin-top: -20px;
 }
 
 /* media queries */
