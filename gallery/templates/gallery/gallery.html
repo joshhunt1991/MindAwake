@@ -23,6 +23,7 @@
           <li class="list-group-item">{{category.name}}</li>
 
           {% endfor %}
+          <li class="list-group-item"><a href="{% url 'addTattoo' %}">Add Photo</a></li>
         </ul>
       </div>
 
@@ -40,7 +41,7 @@
             <div class="card-body">
               <p>Category- {{tattoo.category}}</p>
               <p> {{tattoo.description}}</p>
-              <a class="btn btn-outline-dark m-1" href="{% url 'tattoo' 5 %}">View Tattoo</a>
+              <a class="btn btn-outline-dark m-1" href="{% url 'tattoo' tattoo.id %}">View Tattoo</a>
             </div>
           </div>
         </div>

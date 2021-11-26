@@ -15,11 +15,14 @@ def gallery(request):
 
 def viewTattoo(request, pk):
     """ renders the index page template """
+    tattoo = Tattoo.objects.get(id=pk)
 
-    return render(request, 'gallery/tattoo.html')
+    return render(request, 'gallery/tattoo.html', {'tattoo' : tattoo})
 
 
 def addTattoo(request):
     """ renders the index page template """
+    categories = Category.objects.all()
+    context = {'categories':categories}
 
-    return render(request, 'gallery/add-tattoo.html')
+    return render(request, 'gallery/add-tattoo.html', context)
