@@ -59,6 +59,7 @@
 
 .view-gallery {
     width: 50%;
+    margin-top: 100px;
 }
 
 .return-button {
@@ -100,8 +101,6 @@ body {
 }
 
 .strip-div {
-    position: relative;
-    bottom: 15px;
     padding-bottom: 15px;
 }
 
@@ -110,9 +109,7 @@ body {
     font-size: 2em;
 }
 
-.gallery-container {
-    background-color: black;
-    padding-top: 20px;
+.header-pushdown {
     margin-top: 200px;
 }
 
