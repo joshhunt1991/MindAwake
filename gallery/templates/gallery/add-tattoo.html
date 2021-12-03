@@ -16,11 +16,15 @@
           <a class="btn btn-dark m-1 return-button" href="{% url 'gallery' %}">Return to Gallery</a>
         </div>
         <div class="card">
-          <form>
+
+
+          <form method="POST" action="" enctype="multipart/form-data">
+
+            {% csrf_token %}
 
             <div class="form-group m-3">
               <label>Description</label>
-              <input name="description" type="text" placeholder="Enter Tattoo description here"
+              <input required name="description" type="text" placeholder="Enter Tattoo description here"
                 class="form-control-file">
             </div>
 
@@ -28,18 +32,27 @@
               <label>Select a Category</label>
               <select name="category" class="form-control-file">
                 <option value="none">Select a Category...</option>
+
                 {% for category in categories %}
 
-                <option>{{category.name}}</option>
+                <option value='{{category.id}}'>{{category.name}}</option>
 
                 {% endfor %}
               </select>
             </div>
 
             <div class="form-group m-3">
-              <label>Upload Image</label>
-              <input name="image" type="file" class="form-control-file">
+              <label>Add New Category</label>
+              <input name="category_new" type="text" placeholder="Create a new category"
+                class="form-control-file">
             </div>
+
+            <div class="form-group m-3">
+              <label>Upload Image</label>
+              <input required name="image" type="file" class="form-control-file">
+            </div>
+
+            <button type="submit" class="btn btn-primary m-3">Submit</button>
 
           </form>
         </div>
