@@ -1,11 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Category, Tattoo
 
 # Create your views here.
 
 
 def gallery(request):
-    """ renders the index page template """
+
     categories = Category.objects.all()
     tattoos = Tattoo.objects.all()
     context = {'categories': categories, 'tattoos': tattoos}
@@ -14,22 +14,35 @@ def gallery(request):
 
 
 def viewTattoo(request, pk):
-    """ renders the index page template """
+
     tattoo = Tattoo.objects.get(id=pk)
 
     return render(request, 'gallery/tattoo.html', {'tattoo': tattoo})
 
 
 def addTattoo(request):
-    """ renders the index page template """
+
     categories = Category.objects.all()
 
     if request.method == 'POST':
         data = request.POST
         image = request.FILES.get('image')
 
-        print('data:', data)
-        print('image:', image)
+        if data['category'] != 'none':
+            category = Category.objects.get(id=data['category'])
+        elif data['category_new'] != '':
+            category, created = Category.objects.get_or_create(
+                name=data['category_new'])
+        else:
+            category = None
+
+        tattoo = Tattoo.objects.create(
+            category=category,
+            description=data['description'],
+            image=image,
+        )
+
+        return redirect('gallery')
 
     context = {'categories': categories}
 

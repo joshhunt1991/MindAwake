@@ -17,10 +17,15 @@
           Tattoo Categories
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">All</li>
+          <li class="list-group-item">
+            <a href="{% url 'gallery' %}">All</a>
+          </li>
           {% for category in categories %}
 
-          <li class="list-group-item">{{category.name}}</li>
+          <li class="list-group-item">
+            <a href="{% url 'gallery' %}?category={{category.name}}">
+              {{category.name}}</a>
+          </li>
 
           {% endfor %}
           <li class="list-group-item"><a href="{% url 'addTattoo' %}">Add Photo</a></li>
@@ -35,9 +40,7 @@
         {% for tattoo in tattoos %}
         <div class="col-md-4">
           <div class="card">
-            <img class="image-thumbnail"
-              src="{{tattoo.image.url}}"
-              alt="Card image cap">
+            <img class="image-thumbnail" src="{{tattoo.image.url}}" alt="Card image cap">
             <div class="card-body">
               <p>Category- {{tattoo.category}}</p>
               <p> {{tattoo.description}}</p>
