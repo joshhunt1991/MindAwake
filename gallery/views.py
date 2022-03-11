@@ -6,8 +6,14 @@ from .models import Category, Tattoo
 
 def gallery(request):
 
+    category = request.GET.get('category')
+    if category is None:
+        tattoos = Tattoo.objects.all()
+    else:
+        tattoos = Tattoo.objects.filter(category__name__contains=category)
+
     categories = Category.objects.all()
-    tattoos = Tattoo.objects.all()
+
     context = {'categories': categories, 'tattoos': tattoos}
 
     return render(request, 'gallery/gallery.html', context)
