@@ -8,9 +8,9 @@
 </div>
 {% endblock %}
 {% block content %}
-<div class="header-container no-margins no-padding header-pushdown black-bg">
+<div class="header-container no-margins no-padding header-pushdown">
   <div class="row no-margins no-padding">
-    <div class="col-md-3 no-padding">
+    <div class="col-md-3 no-padding category-nav-div">
 
       <div class="card category-nav">
         <div class="card-header category-nav-header">
@@ -33,17 +33,17 @@
       </div>
 
     </div>
-    <div class="col-md-9">
+    <div class="col-md-9 gallery-container">
 
       <div class="row">
 
         {% for tattoo in tattoos %}
-        <div class="col-md-4 no-padding">
-          <div class="card">
+        <div class="col-md-4 no-padding tattoo-image-div">
+          <div class="card tattoo-image-div">
             <img class="image-thumbnail" src="{{tattoo.image.url}}" alt="Card image cap">
             <div class="card-body">
-              <p>Category- {{tattoo.category}}</p>
-              <p> {{tattoo.description}}</p>
+              <p class="category-nav-header">Category- {{tattoo.category}}</p>
+              <p class="category-nav-text"> {{tattoo.description}}</p>
               <a class="btn btn-outline-dark m-1" href="{% url 'tattoo' tattoo.id %}">View Tattoo</a>
             </div>
           </div>

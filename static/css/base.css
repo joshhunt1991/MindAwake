@@ -59,7 +59,7 @@
 }
 
 .tattoo-image-div {
-
+    margin-bottom: 25px;
 }
 
 .tattoo-image {
@@ -125,13 +125,17 @@ body {
     padding-bottom: 15px;
 }
 
+.category-nav-div {
+    margin-bottom: 25px;
+}
+
 .btn-success {
     width: 150px;
     font-size: 2em;
 }
 
 .header-pushdown {
-    margin-top: 200px;
+    margin-top: 100px;
 }
 
 
