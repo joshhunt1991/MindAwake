@@ -133,3 +133,10 @@ body {
         padding-top: 50px;
     }
 }
+
+/* full width categories on mobile */
+@media (max-width: 992px) {
+    .category-nav {
+        width: 100%;
+    }
+}
