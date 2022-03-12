@@ -113,6 +113,7 @@ body {
     background-size: cover;
     font-family: 'Antonio', sans-serif;
     font-weight: 500;
+    width: 100%;
 }
 
 .landing-text {
@@ -133,6 +134,8 @@ body {
     margin-top: 200px;
 }
 
+
+
 .home-container {
     margin-top: 200px;
 }
@@ -151,6 +154,7 @@ body {
 
     .header-container {
         padding-top: 50px;
+        max-width: 100%;
     }
 }
 
