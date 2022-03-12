@@ -13,22 +13,22 @@
     <div class="col-md-3 no-padding">
 
       <div class="card category-nav">
-        <div class="card-header">
+        <div class="card-header category-nav-header">
           Tattoo Categories
         </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item">
-            <a href="{% url 'gallery' %}">All</a>
+            <a class="category-nav-text" href="{% url 'gallery' %}">All</a>
           </li>
           {% for category in categories %}
 
           <li class="list-group-item">
-            <a href="{% url 'gallery' %}?category={{category.name}}">
+            <a class="category-nav-text" href="{% url 'gallery' %}?category={{category.name}}">
               {{category.name}}</a>
           </li>
 
           {% endfor %}
-          <li class="list-group-item"><a href="{% url 'addTattoo' %}">Add Photo</a></li>
+          <li class="list-group-item"><a class="add-photo-nav-text" href="{% url 'addTattoo' %}">Add Photo</a></li>
         </ul>
       </div>
 
